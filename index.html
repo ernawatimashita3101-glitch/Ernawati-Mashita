@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portofolio Ernawati Mashita</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff5fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #ffffff;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e75480;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e75480;
+        }
+
+
+        /* ================= HOME ================= */
+
+        .home {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 70px;
+        }
+
+        .home-content {
+            max-width: 850px;
+        }
+
+        .home-content h1 {
+            font-size: 55px;
+            color: #e75480;
+            margin-bottom: 10px;
+        }
+
+        .home-content h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .home-content p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .home-description {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 28px;
+            background: #e75480;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #d63d6b;
+            transform: translateY(-3px);
+        }
+
+
+        /* ================= SECTION ================= */
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .title {
+            text-align: center;
+            color: #e75480;
+            font-size: 34px;
+            margin-bottom: 45px;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .about-content {
+            text-align: center;
+            font-size: 17px;
+            color: #555;
+            line-height: 1.9;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        .info {
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .info-box {
+            background: #fff5fa;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #ffd4e3;
+        }
+
+        .info-box h3 {
+            color: #e75480;
+            margin-bottom: 8px;
+        }
+
+
+        /* ================= EDUCATION ================= */
+
+        .education-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .education-box {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-left: 5px solid #e75480;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+        }
+
+        .education-box h3 {
+            color: #e75480;
+            margin-bottom: 8px;
+        }
+
+        .education-box p {
+            color: #666;
+        }
+
+
+        /* ================= SKILLS ================= */
+
+        #skills {
+            background: #fff;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .skill {
+            background: #fff5fa;
+            width: 230px;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 15px;
+            border: 1px solid #ffd4e3;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(231,84,128,0.15);
+        }
+
+        .skill-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .skill h3 {
+            color: #e75480;
+            margin-bottom: 10px;
+        }
+
+        .skill p {
+            color: #666;
+            font-size: 15px;
+        }
+
+
+        /* ================= HOBBY ================= */
+
+        .hobby {
+            background: white;
+            text-align: center;
+        }
+
+        .hobby-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .hobby-content p {
+            color: #666;
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        .hobby-card {
+            margin-top: 30px;
+            padding: 30px;
+            background: #fff5fa;
+            border-radius: 20px;
+        }
+
+        .hobby-card h3 {
+            color: #e75480;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+
+        /* ================= EXPERIENCE ================= */
+
+        .experience-container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .experience-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+        }
+
+        .experience-box h3 {
+            color: #e75480;
+            margin-bottom: 12px;
+        }
+
+        .experience-box p {
+            color: #666;
+        }
+
+
+        /* ================= GOALS ================= */
+
+        .goals {
+            background: white;
+        }
+
+        .goals-container {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .goals-container p {
+            color: #666;
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .goal-list {
+            text-align: left;
+            margin-top: 25px;
+        }
+
+        .goal-list p {
+            margin-bottom: 12px;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            text-align: center;
+            background: #fff5fa;
+        }
+
+        .contact-content {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-content p {
+            margin: 15px;
+            font-size: 17px;
+            color: #555;
+        }
+
+        .contact-button {
+            margin-top: 20px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #e75480;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 13px;
+            }
+
+            .home-content h1 {
+                font-size: 38px;
+            }
+
+            .home-content h2 {
+                font-size: 21px;
+            }
+
+            .home-content p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 80px 5%;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            .info {
+                grid-template-columns: 1fr;
+            }
+
+            .skill {
+                width: 100%;
+                max-width: 300px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <div class="logo">
+            Ernawati.
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <h1>Ernawati Mashita</h1>
+
+            <h2>Student of Software Engineering</h2>
+
+            <p class="home-description">
+                Halo! Saya Ernawati Mashita, seorang siswi SMKN 1 Semparuk
+                yang sedang menempuh pendidikan di jurusan Rekayasa
+                Perangkat Lunak atau RPL.
+            </p>
+
+            <p class="home-description">
+                Saya memiliki ketertarikan terhadap dunia teknologi,
+                khususnya dalam pembuatan website, desain tampilan,
+                pemrograman, dan pengembangan aplikasi.
+            </p>
+
+            <a href="#about" class="btn">
+                Tentang Saya
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <h2 class="title">
+            About Me
+        </h2>
+
+        <div class="about-container">
+
+            <div class="about-content">
+
+                <p>
+                    Perkenalkan, nama saya <strong>Ernawati Mashita</strong>.
+                    Saya merupakan seorang siswi SMKN 1 Semparuk yang
+                    mengambil jurusan Rekayasa Perangkat Lunak (RPL).
+                    Saya memilih jurusan ini karena saya tertarik untuk
+                    mempelajari teknologi dan cara membuat sebuah aplikasi
+                    maupun website.
+                </p>
+
+                <p>
+                    Selama belajar di jurusan RPL, saya mulai mengenal
+                    berbagai macam teknologi pemrograman seperti HTML,
+                    CSS, PHP, dan Laravel. Saya juga belajar mengenai
+                    bagaimana membuat struktur website, mengatur tampilan
+                    halaman, membuat program, serta memahami bagaimana
+                    sebuah website dapat bekerja.
+                </p>
+
+                <p>
+                    Saya adalah seseorang yang senang mencoba hal-hal baru
+                    dan terus belajar untuk meningkatkan kemampuan saya.
+                    Saya menyadari bahwa dunia teknologi terus berkembang,
+                    sehingga saya ingin terus mengembangkan pengetahuan
+                    dan keterampilan saya agar dapat menjadi seseorang
+                    yang memiliki kemampuan di bidang teknologi.
+                </p>
+
+                <p>
+                    Selain belajar tentang teknologi, saya juga memiliki
+                    hobi sederhana yaitu <strong>jajan</strong>. Bagi saya,
+                    jajan merupakan salah satu kegiatan yang menyenangkan
+                    untuk dilakukan ketika sedang memiliki waktu luang.
+                </p>
+
+            </div>
+
+
+            <div class="info">
+
+                <div class="info-box">
+                    <h3>Nama</h3>
+                    <p>Ernawati Mashita</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Sekolah</h3>
+                    <p>SMKN 1 Semparuk</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Jurusan</h3>
+                    <p>Rekayasa Perangkat Lunak</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Hobi</h3>
+                    <p>Jajan 🍜🍰</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education">
+
+        <h2 class="title">
+            My Education
+        </h2>
+
+        <div class="education-container">
+
+            <div class="education-box">
+
+                <h3>🏫 SMKN 1 Semparuk</h3>
+
+                <p>
+                    Saya sedang menempuh pendidikan di SMKN 1 Semparuk
+                    dan mengambil jurusan Rekayasa Perangkat Lunak (RPL).
+                    Di sekolah, saya mempelajari berbagai hal yang
+                    berkaitan dengan teknologi informasi dan pemrograman.
+                </p>
+
+            </div>
+
+            <div class="education-box">
+
+                <h3>💻 Rekayasa Perangkat Lunak</h3>
+
+                <p>
+                    Melalui jurusan RPL, saya belajar mengenai dasar-dasar
+                    pemrograman, pembuatan website, database, desain
+                    antarmuka, serta pengembangan aplikasi.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+        <h2 class="title">
+            My Skills
+        </h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    🌐
+                </div>
+
+                <h3>HTML</h3>
+
+                <p>
+                    Mempelajari HTML untuk membuat struktur dan
+                    kerangka dasar sebuah website.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    🎨
+                </div>
+
+                <h3>CSS</h3>
+
+                <p>
+                    Mempelajari CSS untuk mengatur warna, ukuran,
+                    layout, dan tampilan website.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    💻
+                </div>
+
+                <h3>PHP</h3>
+
+                <p>
+                    Mempelajari PHP sebagai bahasa pemrograman
+                    untuk membuat website yang lebih dinamis.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    ⚡
+                </div>
+
+                <h3>Laravel</h3>
+
+                <p>
+                    Mempelajari Laravel sebagai framework PHP
+                    untuk mengembangkan aplikasi web.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    🗄️
+                </div>
+
+                <h3>Database</h3>
+
+                <p>
+                    Mempelajari dasar database untuk menyimpan
+                    dan mengelola data dalam aplikasi.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    🖥️
+                </div>
+
+                <h3>Web Design</h3>
+
+                <p>
+                    Mempelajari cara membuat tampilan website
+                    yang sederhana, menarik, dan mudah digunakan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOBBY ================= -->
+
+    <section class="hobby">
+
+        <h2 class="title">
+            My Hobby
+        </h2>
+
+        <div class="hobby-content">
+
+            <p>
+                Setiap orang memiliki kegiatan yang disukai untuk
+                mengisi waktu luang. Begitu juga dengan saya.
+                Salah satu hobi saya adalah <strong>jajan</strong>.
+            </p>
+
+            <div class="hobby-card">
+
+                <h3>🍜 Jajan</h3>
+
+                <p>
+                    Saya suka mencoba berbagai macam makanan dan
+                    minuman. Jajan menjadi salah satu kegiatan yang
+                    menyenangkan bagi saya karena saya dapat mencoba
+                    makanan baru dan menikmati waktu bersama teman
+                    maupun keluarga.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section id="experience">
+
+        <h2 class="title">
+            My Learning Experience
+        </h2>
+
+        <div class="experience-container">
+
+            <div class="experience-box">
+
+                <h3>🌐 Membuat Website</h3>
+
+                <p>
+                    Saya belajar membuat website menggunakan HTML dan CSS.
+                    Dalam proses belajar tersebut, saya mempelajari cara
+                    membuat struktur halaman, navigasi, tombol, card,
+                    footer, dan berbagai elemen lainnya.
+                </p>
+
+            </div>
+
+
+            <div class="experience-box">
+
+                <h3>💻 Belajar Pemrograman</h3>
+
+                <p>
+                    Saya juga mempelajari dasar-dasar pemrograman untuk
+                    memahami bagaimana sebuah program dapat menerima input,
+                    memproses data, dan menghasilkan output.
+                </p>
+
+            </div>
+
+
+            <div class="experience-box">
+
+                <h3>⚡ Belajar Laravel</h3>
+
+                <p>
+                    Saya mulai mempelajari framework Laravel untuk
+                    memahami bagaimana membuat website menggunakan
+                    framework PHP serta mengenal konsep routing,
+                    controller, view, dan database.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GOALS ================= -->
+
+    <section class="goals">
+
+        <h2 class="title">
+            My Goals
+        </h2>
+
+        <div class="goals-container">
+
+            <p>
+                Saya ingin terus meningkatkan kemampuan saya di bidang
+                teknologi dan pemrograman. Saya ingin mendapatkan lebih
+                banyak pengalaman dalam membuat website dan aplikasi.
+            </p>
+
+            <p>
+                Saya berharap ilmu yang saya pelajari di jurusan RPL
+                dapat menjadi bekal untuk melanjutkan pendidikan maupun
+                memasuki dunia kerja di bidang teknologi.
+            </p>
+
+            <div class="goal-list">
+
+                <p>🎯 Meningkatkan kemampuan pemrograman.</p>
+
+                <p>🎯 Membuat website yang lebih menarik.</p>
+
+                <p>🎯 Mempelajari teknologi baru.</p>
+
+                <p>🎯 Membuat berbagai project.</p>
+
+                <p>🎯 Menambah pengalaman di bidang IT.</p>
+
+                <p>🎯 Menjadi seorang developer yang terus berkembang.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <h2 class="title">
+            Contact Me
+        </h2>
+
+        <div class="contact-content">
+
+            <p>
+                Jika ingin mengenal saya lebih jauh atau ingin
+                berkomunikasi dengan saya, silakan menghubungi
+                melalui informasi di bawah ini.
+            </p>
+
+            <p>
+                📧 Email:
+                ernawati@example.com
+            </p>
+
+            <p>
+                📱 Instagram:
+                @ernawati
+            </p>
+
+            <div class="contact-button">
+
+                <a href="mailto:ernawati@example.com" class="btn">
+                    Hubungi Saya
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Ernawati Mashita
+        </p>
+
+        <p>
+            Student of Software Engineering | SMKN 1 Semparuk
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
